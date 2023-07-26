@@ -6,6 +6,12 @@
   box-sizing: border-box;
 }
 
+:focus{
+  outline: 5px dotted;
+  outline-offset: 5px;
+  transition: all 0.4s ease;
+}
+
 html{
   scroll-behavior: smooth;
 }
@@ -15,11 +21,29 @@ body{
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
-  color: #fff;
+  color: #eee;
+  background: linear-gradient(135deg, #656bff, #b6072d);
   background-image: url(./img/main-bg.png);
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   background-attachment: fixed;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #eee;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#656bff, #b6072d);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(rgba(101, 107, 255, 0.9), rgba(182, 7, 45, 0.9));
 }
 
 .container{
@@ -39,13 +63,15 @@ body{
   display: inline-block;
   padding: 10px 20px;
   font-size: 18px;
-  color: #fff;
+  color: #eee;
   border-radius: 10px;
+  border: none;
   box-shadow: inset -35px -9px 40px #656bff, inset 35px -9px 40px #b6072d;
   background-color: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(20px);
   white-space: nowrap;
   text-decoration: none;
+  cursor: pointer;
   transition: all 1s ease;
 }
 
