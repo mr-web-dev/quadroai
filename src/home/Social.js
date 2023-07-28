@@ -29,7 +29,7 @@ export default function Social() {
                     <strong className="social__card__title">Email</strong>
                 </a>
 
-                <a href='https://netlify.app' className="social__card">
+                <a href='https://quadroai.vercel.app' className="social__card">
                     <i className="social__card__icon fas fa-globe"></i>
                     <strong className="social__card__title">Website</strong>
                 </a>

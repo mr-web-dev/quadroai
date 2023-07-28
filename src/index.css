@@ -7,9 +7,14 @@
 }
 
 :focus{
-  outline: 5px dotted;
+  outline: 5px dotted !important;
   outline-offset: 5px;
   transition: all 0.4s ease;
+}
+
+::selection{
+  background-color: #656bff;
+  color: #eee;
 }
 
 html{
@@ -22,7 +27,7 @@ body{
   font-size: 16px;
   line-height: 1.5;
   color: #eee;
-  background: linear-gradient(135deg, #656bff, #b6072d);
+  background-color: #111;
   background-image: url(./img/main-bg.png);
   background-size: cover;
   background-repeat: no-repeat;
