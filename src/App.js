@@ -14,7 +14,7 @@ function App() {
     {/* main components start */}
     <Top/>
     <Content/>
-    {/* <Header/> */}
+    <Header/>
     {/* main components end */}
 
     {/* ==================== Page start ==================== */}
@@ -23,7 +23,7 @@ function App() {
     {/* ==================== Page end ==================== */}
 
     {/* main components start */}
-    {/* <Footer/> */}
+    <Footer/>
     {/* main components end */}
 
     </>
