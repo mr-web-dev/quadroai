@@ -3,7 +3,7 @@ import Hero from '../home/Hero';
 import Instruction from '../home/Instruction';
 import About from '../home/About';
 import Contact from '../home/Contact';
-import Social from '../home/Social';;
+import Social from '../home/Social';
 
 function Home() {
   return (
@@ -25,9 +25,9 @@ function Home() {
     <Contact/>
     {/* contact end */}
 
-    {/* footer start */}
+    {/* social start */}
     <Social/>
-    {/* footer end */}
+    {/* social end */}
     
     </>
   );

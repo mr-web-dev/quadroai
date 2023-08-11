@@ -18,7 +18,7 @@ export default function About() {
             <div className="about__card-col">
 
               <div className="about__card">
-                <i class="about__card__icon icon-blue fas fa-gears"></i>
+                <i className="about__card__icon icon-blue fas fa-gears"></i>
                 <h3 className="about__card__title">Bizning 𝓠𝓾𝓪𝓭𝓻𝓸 𝓪𝓲 xizmatimiz haqida:</h3>
                 <p className="about__card__text">ChatGPT - OpenAI tomonidan tuzilgan eng yuqori texnologiyalar bilan tayyorlangan zamonaviy til modelidir. <br /> Ushbu model sizning savollaringizga javob berish, foydalanuvchilarga tarjima, savol-javoblar, matn yozish, kreativlik va yaratuvchanlik, texnologik masalalar yechish, ma'lumotlar taqdim etish va ko’plab turli xil vazifalarni bajarishda yordam beradi. <br /> <b>𝓠𝓾𝓪𝓭𝓻𝓸 𝓪𝓲</b> yuqoridagi ko’rsatilgan vazifalarni bajaruvchi veb-sayt. <br /><br /> Model: muallifi: <a href="https://openai.com">openai.com</a> <br /><br /> Chatni boshlash uchun bosh sahifadagi <a href="#home">boshlash</a> tugmasini bosing.</p>
               </div>
