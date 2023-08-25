@@ -14,12 +14,12 @@ export default function Social() {
 
             <div className="social__card-wrap">
 
-                <a href='https://t.me/quadroai/' className="social__card">
+                <a href='https://t.me/quadroaiuz/' className="social__card">
                     <i className="social__card__icon fab fa-telegram"></i>
                     <strong className="social__card__title">Telegram</strong>
                 </a>
 
-                <a href='https://instagram.com/quadro.ai/' className="social__card">
+                <a href='https://instagram.com/quadroaiuz/' className="social__card">
                     <i className="social__card__icon fab fa-instagram"></i>
                     <strong className="social__card__title">Instagram</strong>
                 </a>

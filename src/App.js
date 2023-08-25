@@ -1,9 +1,14 @@
 import React from 'react';
 import './App.css';
+
+// components
+import Loader from './components/Loader';
 import Top from './components/Top';
 import Content from './components/Content';
 import Header from './components/Header';
 import Footer from './components/Footer';
+
+// import pages
 import Home from './page/Home';
 import Chat from './page/Chat';
 
@@ -12,6 +17,7 @@ function App() {
     <>
 
     {/* main components start */}
+    <Loader/>
     <Top/>
     <Content/>
     <Header/>

@@ -1,15 +1,20 @@
 import React from 'react'
-import '../App.css'
-import ChatSect from '../chat/ChatSect'
+import "../App.css"
+import Sidebar from '../chat/Sidebar';
+import ChatWindow from '../chat/ChatWindow';
 
 export default function Chat() {
   return (
     <>
 
-    {/* chat sect start */}
-    <ChatSect/>
-    {/* chat sect end */}
-    
+      {/* sidebar start */}
+      <Sidebar/>
+      {/* sidebar end */}
+      
+      {/* chat start */}
+      <ChatWindow/>
+      {/* chat end */}
+
     </>
   );
 };

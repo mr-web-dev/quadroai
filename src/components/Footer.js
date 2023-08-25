@@ -7,7 +7,7 @@ export default function Footer() {
     {/* footer start */}
     <footer className="footer">
       <div className="footer__container">
-        <a href="#social" className="footer__copyright">© 𝓠𝓾𝓪𝓭𝓻𝓸 𝓪𝓲 | 2023</a>
+        <a href="#social" className="footer__copyright">© ℚ𝕦𝕒𝕕𝕣𝕠 𝔻𝕖𝕧 | 2023</a>
       </div>
     </footer>
     {/* footer end */}

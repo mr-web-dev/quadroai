@@ -61,7 +61,21 @@ body{
 }
 
 .primary{
+  color: #656bff;
+  transition: all 0.4s ease;
+}
+
+.primary span{
   color: #b6072d;
+  transition: all 0.4s ease;
+}
+
+.primary:hover{
+  color: #b6072d;
+}
+
+.primary:hover span{
+  color: #656bff;
 }
 
 .btn{

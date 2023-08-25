@@ -2,6 +2,74 @@
     --transition: all 0.4s ease;
 }
 
+/* loader start */
+
+.loader{
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1000000;
+    backdrop-filter: blur(7px);
+    transition: all 0.4s ease;
+}
+
+.loader-active{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.loader__container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.loader__img-box{
+    width: 100%;
+    max-width: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.loader__img{
+    width: 100%;
+    object-fit: cover;
+    scale: 1.5;
+    animation: loader 3s infinite ease;
+}
+
+.loader__text-box{
+    text-align: center;
+}
+
+.loader__title{
+    font-size: 40px;
+}
+
+.loader__title::after{
+    content: "";
+    animation: dot1 2s infinite ease;
+}
+
+.loader__title::before{
+    content: "";
+    animation: dot2 2s infinite ease;
+}
+
+/* loader end */
+
 /* top start */
 
 .top{
@@ -119,12 +187,10 @@
 }
 
 .header__logo{
-    width: 100%;
-    max-width: 150px;
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    font-size: 25px;
+    font-size: 23px;
     color: #eee;
     text-decoration: none;
 }
@@ -162,11 +228,20 @@
 }
 
 .nav__link{
-    display: inline-block;
-    font-size: 18px;
+    padding-left: 5px;
+    padding-right: 5px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 16px;
     color: #eee;
     text-decoration: none;
     transition: var(--transition);
+}
+
+.nav__link:hover{
+    scale: 0.9;
 }
 
 .nav__link::after{
@@ -180,7 +255,7 @@
 }
 
 .nav__link:hover::after{
-    width: 100%;
+    width: 115%;
 }
 
 /* header end */
@@ -345,19 +420,12 @@
     justify-content: center;
     align-items: center;
     gap: 20px;
-}
-
-.about__card-col{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
     flex-direction: column;
 }
 
 .about__card{
     width: 100%;
-    max-width: 695px;
+    max-width: 700px;
     padding: 30px 20px;
     display: flex;
     justify-content: center;
@@ -384,6 +452,7 @@
 
 .about__card__img-box{
     width: 100%;
+    max-width: 400px;
     display: flex;
 }
 
@@ -392,13 +461,13 @@
     object-fit: cover;
 }
 
-.mini-card{
-    max-width: 395px;
-}
-
 .about__card__title{
     font-size: 20px;
     text-align: center;
+}
+
+.about__card__text{
+    text-indent: 25px;
 }
 
 .about__card__text a{
@@ -408,6 +477,83 @@
 }
 
 /* about end */
+
+/* services start */
+
+.services{
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+}
+
+.services__container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-direction: column;
+}
+
+.services__title{
+    font-size: 50px;
+}
+
+.services__card-wrap{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.services__card{
+    width: 100%;
+    max-width: 700px;
+    padding: 30px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-direction: column;
+    border-radius: 20px;
+    border: 0.5px solid #eee;
+    background: rgba(255, 0, 229, 0.10);
+    backdrop-filter: blur(20px);
+}
+
+.services__card__icon{
+    font-size: 120px;
+}
+
+.services__card__img-box{
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+}
+
+.services__card__img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.services__card__title{
+    font-size: 20px;
+    text-align: center;
+}
+
+.services__card__text a{
+    font-weight: 700;
+    color: #eee;
+    text-decoration: underline;
+}
+
+/* services end */
 
 /* contact start */
 
@@ -636,10 +782,70 @@
 
 .sidebar-bot{
     width: 100%;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    backdrop-filter: blur(10px);
+}
+
+.sidebar-bot-active .sidebar__context{
+    height: 119px;
+    padding: 0;
+    border-radius: 10px 10px 0 0;
+    border: 0.1px solid #eee;
+}
+
+.sidebar-bot-active .sidebar__card{
+    border-top: none;
+    border-radius: 0 0 10px 10px;
+    transition-delay: 0s;
+}
+
+.sidebar__context{
+    width: 100%;
+    height: 0;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    bottom: 51px;
+    left: 0;
+    right: 0;
+    background-color: transparent;
+    border: 0.1px solid transparent;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.6s;
+}
+
+.sidebar__list{
+    width: 100%;
+    list-style: none;
+}
+
+.sidebar__item{
+    width: 100%;
+    display: block;
+}
+
+.context__btn{
+    width: 100%;
+    font-size: 16.5px;
+    background-color: transparent;
+    border-top: 0.5px solid #eee;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.context__btn:hover{
+    box-shadow: none;
+    opacity: 0.8;
+}
+
+.sidebar__item:first-child .context__btn{
+    border: none;
 }
 
 .sidebar__card{
@@ -651,6 +857,8 @@
     gap: 20px;
     border: 0.5px solid #eee;
     border-radius: 10px;
+    transition: all 0.6s ease;
+    transition-delay: 0.15s;
 }
 
 .sidebar__card__profile{
@@ -670,6 +878,13 @@
     background-color: transparent;
     border: none;
     color: #eee;
+    cursor: pointer;
+    transition: all 0.6s ease;
+    rotate: 45deg;
+}
+
+.sidebar-bot-active .sidebar__card__icon{
+    rotate: 0deg;
 }
 
 /* chat end */
@@ -728,19 +943,59 @@
     .content-card{
         max-width: 500px;
     }
-    
-    .about__card-wrap{
-        flex-direction: column;
-    }
-
-    .about__card{
-        max-width: 750px;
-    }
-    
-    .mini-card{
-        max-width: 750px;
-    }
 
 }
 
 /* @media end */
+
+/* keyframes start */
+
+@keyframes loader {
+
+    100%{
+        rotate: 360deg;
+    }
+
+}
+
+@keyframes dot1 {
+
+    25%{
+        content: "";
+    }
+
+    50%{
+        content: ".";
+    }
+
+    75%{
+        content: "..";
+    }
+
+    100%{
+        content: "...";
+    }
+
+}
+
+@keyframes dot2 {
+
+    25%{
+        content: "";
+    }
+
+    50%{
+        content: ".";
+    }
+
+    75%{
+        content: "..";
+    }
+
+    100%{
+        content: "...";
+    }
+
+}
+
+/* keyframes end */

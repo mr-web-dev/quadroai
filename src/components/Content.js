@@ -2,7 +2,10 @@ import React, { useState } from 'react'
 import '../App.css'
 
 export default function Content() {
-  const [content , setContent] = useState(true);
+  setInterval(() => {
+    setContent(true);
+  }, 300000);
+  const [content , setContent] = useState(false);
   return (
     <>
     {/* content start */}

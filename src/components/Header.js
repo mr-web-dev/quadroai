@@ -9,7 +9,7 @@ export default function Header() {
 
       <div className="container header__container">
 
-        <a href="#" className="header__logo">𝓠𝓾𝓪𝓭𝓻𝓸 𝓪𝓲</a>
+        <a href="#" className="header__logo">ℚ𝕦𝕒𝕕𝕣𝕠 𝔸𝕚</a>
 
         <nav className="nav">
 
@@ -30,6 +30,10 @@ export default function Header() {
 
             <li className="nav__item">
               <a href="#about" className="nav__link">Biz haqimizda</a>
+            </li>
+
+            <li className="nav__item">
+              <a href="#services" className="nav__link">Xizmatlar</a>
             </li>
             
             <li className="nav__item">
