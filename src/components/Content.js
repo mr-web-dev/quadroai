@@ -16,7 +16,7 @@ export default function Content() {
             <i className="fas fa-times"></i>
           </button>
           <p className="content__text">Sayt yangiliklaridan doimiy xabardor bo‘lish uchun <b>TELEGRAM</b> sahifamizga obuna bo‘ling.</p>
-          <a href="https://t.me/quadroai" className="btn">Ketdik</a>
+          <a href="https://t.me/quadroaiuz" className="btn">Ketdik</a>
         </div>
       </div>
     </section>

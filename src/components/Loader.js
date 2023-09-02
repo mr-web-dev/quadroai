@@ -6,7 +6,7 @@ export default function Loader() {
   const [myLoad, setMyLoad] = useState(true);
   function loadFunc(){
     setTimeout(() => {
-        setMyLoad(false);
+      setMyLoad(false);
     }, 700);
   };
   return (
